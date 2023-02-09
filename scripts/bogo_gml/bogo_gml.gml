@@ -9,10 +9,10 @@ function ds_list_bogo(list) {
     }
     while (true) {
         try {
-            if (sorted(list)) break;
+            if (sorted(list)) return;
             ds_list_shuffle(list);
         } catch (e) {
-            break;
+            return;
         }
     }
 }
@@ -39,10 +39,10 @@ function array_bogo(array) {
     }
     while (true) {
         try {
-            if (sorted(array)) break;
             shuffle(array);
+            if (sorted(array)) return;
         } catch (e) {
-            break;
+            return;
         }
     }
 }
