@@ -1,0 +1,8 @@
+{
+  "FolderOrderSettings": [
+    {"name":"why are you doing this","order":10,"path":"folders/why are you doing this.yy",},
+  ],
+  "ResourceOrderSettings": [
+    {"name":"bogo_gml","order":1,"path":"scripts/bogo_gml/bogo_gml.yy",},
+  ],
+}

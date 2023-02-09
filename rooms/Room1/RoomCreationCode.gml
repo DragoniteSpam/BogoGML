@@ -1,35 +1,35 @@
 #region array
-/*
-var array = array_create(10);
 
-repeat (10) {
+var c = 10;
+var trials = 10;
+var array = [];
+
+var t = get_timer();
+
+repeat (trials) {
     var n = 0;
-    repeat (10) array[n++] = irandom(100);
+    repeat (c) array[n++] = irandom(100);
     array_bogo(array);
-    var str = "";
-    for (var i = 0; i < array_length(array); i++) {
-        str += string(array[i]) + " ";
-    }
-    show_debug_message(str);
 }
-*/
+
+show_debug_message("Bogo on arrays of size {0} takes about {1} s", c, (get_timer() - t) / 1_000_000);
+
 #endregion
 
 #region list
-/*
+
 var list = ds_list_create();
 
-repeat (10) {
+t = get_timer();
+
+repeat (trials) {
     var n = 0;
-    repeat (10) list[| n++] = irandom(100);
+    repeat (c) list[| n++] = irandom(100);
     ds_list_bogo(list);
-    var str = "";
-    for (var i = 0; i < ds_list_size(list); i++) {
-        str += string(list[| i]) + " ";
-    }
-    show_debug_message(str);
 }
 
 ds_list_destroy(list);
-*/
+
+show_debug_message("Bogo on lists of size {0} takes about {1} s", c, (get_timer() - t) / 1_000_000);
+
 #endregion
