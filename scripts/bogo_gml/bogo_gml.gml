@@ -8,12 +8,8 @@ function ds_list_bogo(list) {
         return true;
     }
     while (true) {
-        try {
-            if (sorted(list)) return;
-            ds_list_shuffle(list);
-        } catch (e) {
-            return;
-        }
+        if (sorted(list)) return;
+        ds_list_shuffle(list);
     }
 }
 
@@ -27,11 +23,7 @@ function array_bogo(array) {
         return true;
     }
     while (true) {
-        try {
-            if (sorted(array)) return;
-            array_shuffle_ext(array);
-        } catch (e) {
-            return;
-        }
+        if (sorted(array)) return;
+        array_shuffle_ext(array);
     }
 }
