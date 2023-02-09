@@ -26,21 +26,10 @@ function array_bogo(array) {
         }
         return true;
     }
-    var shuffle = function(array) {
-        var values = ds_list_create();
-        for (var i = 0; i < array_length(array); i++) {
-            ds_list_add(values, array[i]);
-        }
-        ds_list_shuffle(values);
-        for (var i = 0; i < array_length(array); i++) {
-            array[@ i] = values[| i];
-        }
-        ds_list_destroy(values);
-    }
     while (true) {
         try {
-            shuffle(array);
             if (sorted(array)) return;
+            array_shuffle_ext(array);
         } catch (e) {
             return;
         }
